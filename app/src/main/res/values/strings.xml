@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">covid</string>
+    <string name="eula">eula</string>
+    <string name="updates">updates</string>
+</resources>
