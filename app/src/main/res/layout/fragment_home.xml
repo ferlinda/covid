@@ -4,13 +4,92 @@
     android:layout_height="match_parent">
 
     <Button
+        android:id="@+id/scan_deact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="go_bluetooth"
+        android:text="Dectivate Scan"
+        android:background="@drawable/button_rounded"
+        android:fontFamily="@font/circularstdmedium"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:textAllCaps="false"
+        android:textColor="#ffff"
+        android:textSize="20sp"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/scan_act"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="go_bluetooth"
+        android:text="Activate Scan"
+        android:background="@drawable/button_rounded"
+        android:fontFamily="@font/circularstdmedium"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:textAllCaps="false"
+        android:textColor="#ffff"
+        android:textSize="20sp"/>
+
+    <Button
         android:id="@+id/log_out"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="logout"
         android:text="Log Out"
-        android:gravity="center"
-        android:layout_centerInParent="true"/>
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_rounded"
+        android:fontFamily="@font/circularstdmedium"
+        android:layout_centerInParent="true"
+        android:textAllCaps="false"
+        android:layout_below="@id/bluetooth_act"
+        android:textColor="#ffff"
+        android:textSize="20sp"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layout_bluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:layout_below="@id/log_out"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"
+        >
+
+        <ProgressBar
+            android:id="@+id/progress_scan_devices"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paired Devices" />
+
+        <ListView
+            android:id="@+id/list_paired_devices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Around You" />
+
+        <ListView
+            android:id="@+id/list_available_devices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
 
 
 </RelativeLayout>
